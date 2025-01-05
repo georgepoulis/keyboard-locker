@@ -32,7 +32,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var eventTap: CFMachPort?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // No need for explicit setup here as SwiftUI handles the MenuBarExtra
+        // set to accessory so it doesn't appear on the Dock
+        NSApp.setActivationPolicy(.accessory)
     }
 
     func lockKeyboard() {
